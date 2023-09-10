@@ -1,4 +1,4 @@
-module redis-bitmap-go
+module github.com/delicious-z/redis-bitmap-go
 
 go 1.19
 
