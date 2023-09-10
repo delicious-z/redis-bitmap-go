@@ -52,10 +52,11 @@ in redis, it almost requires 1MB memory.
 The situation may be more complex in real world. The bitmap may be dense in some intervals, but sparse in others intervals.
 redis-bitmap did something to make it cost less memory:
 1. divide the bitmap into many partitions(10 million bit per partition)
-![partition-division](img/img.png)
+![img](https://github.com/delicious-z/redis-bitmap-go/assets/49525320/cdafffcc-6e24-441e-9c94-e5cb99deff13)
 
-2. store the sparse partitions at redis in a compact format
-![redis-data-structure](img/redis-data-structure.png)
+
+3. store the sparse partitions at redis in a compact format
+![redis-data-structure](https://github.com/delicious-z/redis-bitmap-go/assets/49525320/35e2ee55-d695-4679-b1bb-ef6d06bfde47)
 
 
 ### high performance write & read
