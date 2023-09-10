@@ -8,15 +8,22 @@ It implements a simple version of [RoaringBitmap](https://github.com/RoaringBitm
 
 ## Example
 
+
+**install**
+```
+go get -u github.com/delicious-z/redis-bitmap-go
+```
+
+
 **create a RedisBitmapManager**
 
 ```
-addrs := []string{
-"192.168.137.108:6380",
-"192.168.137.108:6381",
-"192.168.137.108:6382"}
-clusterClient := redis.NewClusterClient(&redis.ClusterOptions{Addrs: addrs})
-mng := Create(clusterClient)
+	addrs := []string{
+		"192.168.137.108:6380",
+		"192.168.137.108:6381",
+		"192.168.137.108:6382"}
+	clusterClient := redis.NewClusterClient(&redis.ClusterOptions{Addrs: addrs})
+	mng := redis_bitmap_go.Create(clusterClient)
 ```
 
 **write**
